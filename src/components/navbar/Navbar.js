@@ -31,11 +31,10 @@ function Navbar() {
         };
     };
 
-    if(!isBrowser) {
-        return;
+    if(typeof window !== `undefined`) {
+        window.addEventListener('scroll', changeNavColor);
     };
 
-    window.addEventListener('scroll', changeNavColor);
     return (
         <nav className={navbar ? 'header active' : 'header'} >
             {/* <div className="logo" ></div> */}

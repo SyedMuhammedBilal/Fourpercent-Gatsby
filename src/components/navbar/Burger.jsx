@@ -55,7 +55,10 @@ function Burger() {
       setColor('#fff');
     }
   }
-  window.addEventListener('scroll', changeBurgerColor);
+
+  if(typeof window !== `undefined`) {
+    window.addEventListener('scroll', changeBurgerColor);
+  }
 
   return (
     <>

@@ -4,7 +4,7 @@ import { navigate } from 'gatsby'
 import Burger from './Burger'
 import Logo from '../../images/fourpercent-logo.png'
 import './Nav.css'
-import { isBrowser } from './utils'; 
+import { isBrowser } from './util'; 
 
 const Nav = styled.nav`
   top: 0;
@@ -22,7 +22,6 @@ const Nav = styled.nav`
 
 function Navbar() {
     const [navbar, setNavbar] = useState(false);
-    const isBrowser = typeof window !== "undefined"
 
     const changeNavColor = () => {
         if (window.scrollY >= 80) {

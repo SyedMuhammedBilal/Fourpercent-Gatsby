@@ -50,7 +50,10 @@ function RightNav({ open, setOpen }) {
         }
     }
 
-    window.addEventListener('scroll', changeColor)
+    if(typeof window !== `undefined`) {
+        window.addEventListener('scroll', changeColor)
+    }
+
 
     return (
 

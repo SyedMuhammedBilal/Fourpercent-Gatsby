@@ -8,6 +8,9 @@ import Layout from '../components/layout'
 import Timeline from '../components/timeline/Timeline'
 import SEO from '../components/seo'
 
+const isBrowser = typeof window !== "undefined"
+console.log('-------->',isBrowser);
+
 const IndexPage = () => (
   <Layout>
     <SEO title="HOME" />

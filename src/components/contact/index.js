@@ -100,7 +100,7 @@ const ContactFields = () => {
 
     return (
         <React.Fragment>
-            <form className="form">
+            <form action="mailto:together@fourpercnt.com" method="POST" encType="multipart/form-data" className="form">
                 <div className="form__field-1">
                     <div className="form__input-1">
                         <label>First Name</label>

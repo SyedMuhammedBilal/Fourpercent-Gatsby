@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
+import { navigate } from 'gatsby'
 import Burger from './Burger'
 import Logo from '../../images/fourpercent-logo.png'
 import './Nav.css'
@@ -14,7 +15,7 @@ const Nav = styled.nav`
   display:flex;
   justify-content: space-between;
   z-index: 32;
-`
+`;
 
 
 function Navbar() {
@@ -27,16 +28,17 @@ function Navbar() {
             setNavbar(false);
         };
     };
+
     window.addEventListener('scroll', changeNavColor);
     return (
         <nav className={navbar ? 'header active' : 'header'} >
             {/* <div className="logo" ></div> */}
-            <img style={{zIndex: '1', marginTop: '10px'}} src={Logo} className="logo" />
+            <img onClick={() => navigate('/')} style={{zIndex: '1', marginTop: '10px', cursor: 'pointer'}} src={Logo} className="logo" />
             <Burger />
 
         </nav>
 
-    )
-}
+    );
+};
 
 export default Navbar

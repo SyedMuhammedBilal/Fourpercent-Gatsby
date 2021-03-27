@@ -1,18 +1,20 @@
-import React from 'react'
+import React from 'react';
 import { navigate } from 'gatsby'
 import { SuccessData } from '../data/aboutData'
 import '../components/success.css'
 import BlogPosts from '../components/blog-post/index'
+import Layout from '../components/layout'
+
 
 const Success = () => {
     let { title, description, buttonTitle } = SuccessData
 
     const handlePage = () => {
         navigate('/')
-    }
+    };
 
     return (
-        <React.Fragment>
+        <Layout>
             <div className="success__background">
                 <h1>{title}</h1>
                 <p>{description}</p>
@@ -24,8 +26,8 @@ const Success = () => {
                 </button>
             </div>
             <BlogPosts />
-        </React.Fragment>
+        </Layout>
     );
-}
+};
 
 export default Success;

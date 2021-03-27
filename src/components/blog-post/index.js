@@ -7,6 +7,7 @@ const PinkBG = styled.div`
     padding: 60px;
     color: #fff;
     margin-top: 10vh;
+    opacity: 0.9;
 `
 
 const Description = styled.p `

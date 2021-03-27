@@ -1,7 +1,7 @@
 import React, { useCallback, useState } from 'react'
 import styled from 'styled-components'
 import "./Nav.css"
-import { navigate } from 'gatsby'
+import { navigate, Link } from 'gatsby'
 
 const Ul = styled.ul`
     list-style: none;
@@ -55,16 +55,20 @@ function RightNav({ open, setOpen }) {
     return (
 
         <Ul style={{ zIndex: "25" }} className="dropdown" open={open}>
-            <li onClick={() => navigate('/#about'), handeInputChange} style={{color: fill, transition: '.4s all'}} className="dropbtn">
-                About fourpercent
-            </li>
+            <Link style={{textDecoration: 'none'}} to="/#about" onClick={() => handeInputChange}>
+                <li style={{color: fill, transition: '.4s all'}} className="dropbtn">
+                    About fourpercent
+                </li>
+            </Link>
             <div className="dropdown-content">
-                <a style={{ cursor: 'pointer', marginBottom: '2px' }} onClick={() => navigate('/#2017'), handeInputChange} > 2019</a>
+                <Link to="/#2019" style={{ cursor: 'pointer', marginBottom: '2px' }} onClick={() => handeInputChange} > 2019</Link>
                 <a style={{ cursor: 'pointer' }} onClick={() => navigate('/#2020'), handeInputChange} >2020</a>
             </div>
-            <li onClick={() => navigate('/#contact'), handeInputChange} style={{color: fill, transition: '.4s all'}} className="lii">
-                Contact
-            </li>
+            <Link to="/#contact" style={{textDecoration: 'none'}} onClick={() => navigate('/#contact'), handeInputChange}>
+                <li style={{color: fill, transition: '.4s all', cursor: 'pointer'}} className="lii">
+                    Contact
+                </li>
+            </Link>
         </Ul>
 
 
